@@ -6,7 +6,7 @@ from pymongo import MongoClient
 # CONEXÃO COM O MONGODB ATLAS
 # ---------------------------
 
-MONGO_URI = "mongodb+srv://gustavomarco_db_user:gustavo2002@lab-bd.50wjwhy.mongodb.net/?appName=lab-bd"
+MONGO_URI = "mongodb+srv://gustavomarco_db_user:labbd123@lab-bd.50wjwhy.mongodb.net/?appName=lab-bd"
 
 client = MongoClient(MONGO_URI)
 # Banco para currículos
