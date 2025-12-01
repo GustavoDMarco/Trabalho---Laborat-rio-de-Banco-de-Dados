@@ -3,6 +3,13 @@ import pandas as pd
 from connection_mongo import curriculos
 from bson import ObjectId
 
+# ----------------------------
+# Botão voltar para a home
+# ----------------------------
+if st.button("⬅️ Voltar para a Home"):
+    st.switch_page("app.py")
+
+
 st.title("📄 Lista de Currículos (MongoDB)")
 
 # ---------------------------
@@ -50,3 +57,4 @@ if st.button("❌ Apagar currículo"):
         st.rerun()  # recarrega página atualizando a tabela
     except Exception as e:
         st.error(f"Erro ao apagar currículo: {e}")
+

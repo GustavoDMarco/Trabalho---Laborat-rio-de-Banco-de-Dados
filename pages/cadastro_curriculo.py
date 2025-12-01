@@ -1,6 +1,13 @@
 import streamlit as st
 from connection_mongo import curriculos
 
+# ----------------------------
+# Botão voltar para a home
+# ----------------------------
+if st.button("⬅️ Voltar para a Home"):
+    st.switch_page("app.py")
+
+
 st.title("📄 Cadastro de Currículo")
 
 # opções de cidade
@@ -99,3 +106,4 @@ if "_feedback" in st.session_state:
         st.error(message)
     # opcional: remover feedback para não repetir sempre
     del st.session_state._feedback
+

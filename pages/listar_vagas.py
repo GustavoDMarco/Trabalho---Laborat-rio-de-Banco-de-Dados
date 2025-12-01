@@ -3,6 +3,13 @@ import pandas as pd
 from connection_mongo import vagas
 from bson import ObjectId
 
+# ----------------------------
+# Botão voltar para a home
+# ----------------------------
+if st.button("⬅️ Voltar para a Home"):
+    st.switch_page("app.py")
+
+
 st.title("💼 Lista de Vagas (MongoDB)")
 
 # ---------------------------

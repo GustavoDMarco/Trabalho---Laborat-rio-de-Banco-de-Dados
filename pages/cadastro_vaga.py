@@ -3,6 +3,13 @@ from connection_mongo import vagas
 
 st.title("📝 Cadastro de Vaga")
 
+# ----------------------------
+# Botão voltar para a home
+# ----------------------------
+if st.button("⬅️ Voltar para a Home"):
+    st.switch_page("app.py")
+
+
 # Inicializa os valores somente uma vez
 if "form_data" not in st.session_state:
     st.session_state.form_data = {
@@ -67,3 +74,4 @@ if enviar:
 
     else:
         st.error("Preencha todos os campos obrigatórios.")
+
