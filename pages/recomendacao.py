@@ -54,7 +54,7 @@ def mostrar_recomendacao():
     # FULL TEXT SEARCH NO MONGO
     # ======================================================
 
-    texto_busca = f"{vaga_escolhida.get('descricao', '')} {vaga_escolhida.get('requisitos', '')}"
+    texto_busca = f"{vaga_escolhida.get('descricao', '')} {vaga_escolhida.get('requisitos', '')} {vaga_escolhida.get('skills', '')}"
 
     resultados = list(curriculos.aggregate([
         {
