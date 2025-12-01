@@ -24,9 +24,10 @@ def mostrar_home():
     for vaga in lista_vagas:
         with st.container(border=True):
             st.subheader(vaga.get("titulo", "Sem título"))
-            st.write(f"📝 **Descricao:** {vaga.get('descricao', 'Não informado')}")
-            st.write(f"💰 **Salário:** {vaga.get('salario', 'Não informado')}")
-            st.write(f"🏢 **Empresa:** {vaga.get('empresa', 'Não informado')}")
+            st.write(f"**Descricao:** {vaga.get('descricao', 'Não informado')}")
+            st.write(f"**Salário:** {vaga.get('salario', 'Não informado')}")
+            st.write(f"**Empresa:** {vaga.get('empresa', 'Não informado')}")
+            st.write(f"**Cidade:** {vaga.get('cidade', 'Não informado' )} - {vaga.get('estado', 'Não informado' )}")
 
 
 # =============== TELA DO ADMINISTRADOR ===============
@@ -43,7 +44,8 @@ def tela_admin():
             "Listar Vagas",
             "Cadastrar Currículo",
             "Listar Currículos",
-            "Recomendar Currículos por Vaga"
+            "Recomendar Currículos por Vaga",
+            "Localização das Vagas",
         ]
     )
 
@@ -62,6 +64,9 @@ def tela_admin():
     elif opcao == "Recomendar Currículos por Vaga":
         st.switch_page("pages/recomendacao.py")
 
+    elif opcao == "Localização das Vagas":
+        st.switch_page("pages/localiza_cidades.py")  
+        
     else:
         st.info("Selecione uma opção no menu para continuar.")
 
